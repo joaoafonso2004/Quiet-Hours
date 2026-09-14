@@ -1,0 +1,28 @@
+Modelos dos objectos que ficam na mao durante as tarefas domesticas.
+
+Larga aqui os ficheiros com estes nomes exactos (.fbx, .obj ou .prefab):
+
+    glass    o copo de agua
+    mug      a caneca a ser lavada
+    plate    o prato com comida
+    cloth    a pilha de roupa dobrada
+
+Depois corre "Pungent/Blockout/Wire Daily Pressure (chores + changes)" e eles
+entram sozinhos. Nao e preciso mexer na cena nem arrastar nada.
+
+Nao havendo ficheiro, o jogo usa as primitivas geradas por codigo e corre na
+mesma -- nenhum destes e obrigatorio.
+
+TRES REGRAS QUE INTERESSAM MAIS DO QUE A GEOMETRIA:
+
+1. O copo, o prato e a roupa precisam de um filho chamado exactamente
+   "Contents": a agua, a comida, a pilha. E ele que encolhe ao longo da tarefa.
+   O pivot desse filho tem de estar NA BASE, senao encolhe para o centro e fica
+   a flutuar. A caneca nao precisa: e a loica, nao o que la ia dentro.
+
+2. Escala real, em metros. O copo tem uns 10 cm de altura, o prato uns 21 cm de
+   diametro. O pivot do objecto todo fica onde a mao o agarraria.
+
+3. Sem colliders. Isto vive a 30 cm da camara e empurrava o proprio jogador.
+
+Falhando a regra 1, o componente avisa na consola em vez de falhar calado.

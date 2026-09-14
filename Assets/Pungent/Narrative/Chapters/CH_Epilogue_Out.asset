@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9359b6c3e69520948a22818c9a26ed87, type: 3}
+  m_Name: CH_Epilogue_Out
+  m_EditorClassIdentifier: 
+  title: Epilogue - The statement
+  cardDate: THREE DAYS LATER
+  cardTime: 
+  startsOnEvent: ending_out
+  steps:
+  - Objective: 
+    SideObjective: 
+    Thought: I gave a statement in a room with a plant in it.
+    Ends: 1
+    Seconds: 6.5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: 
+    RaiseOnComplete: []
+  - Objective: 
+    SideObjective: 
+    Thought: They asked me twice whether I was sure the torch was mine. I said the
+      tape was mine.
+    Ends: 1
+    Seconds: 6.5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: 
+    RaiseOnComplete: []
+  - Objective: 
+    SideObjective: 
+    Thought: I still check the street before I come up. I lock the passenger door
+      now.
+    Ends: 1
+    Seconds: 6.5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: 
+    RaiseOnComplete:
+    - game_end

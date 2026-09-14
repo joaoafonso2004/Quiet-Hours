@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb96658ea9497e745bd8953c2f5e1176, type: 3}
+  m_Name: DLG_Reboot_Rui_Arrival
+  m_EditorClassIdentifier: 
+  speaker: Rui
+  beats:
+  - Line: "Tom\xE1s, right? I'm Rui. I've got the other room. Your father said the lift was taking forever."
+    UsePhone: 0
+    Choices:
+    - Text: Yeah. Thanks for holding the room.
+      Reply: No problem. He sounded relieved you found somewhere this quickly.
+      Tone: 0
+      RaisesEvent:
+    - Text: You spoke to my father?
+      Reply: Only about the deposit. He wanted to know who he was sending half of it to.
+      Tone: 3
+      RaisesEvent:
+    - Text: Say nothing
+      Reply: "...Long trip. I get it."
+      Tone: 4
+      RaisesEvent:
+  - Line: Your room is the last door on the left. Kitchen and bathroom are shared. I cleared you a shelf in the fridge.
+    UsePhone: 0
+    Choices: []
+  - Line: The front door can get stuck. Lift the handle, then turn the key. There is one spare key.
+    UsePhone: 0
+    Choices:
+    - Text: Got it.
+      Reply: Good. I do not want to wake up at three in the morning to let you in.
+      Tone: 0
+      RaisesEvent:
+    - Text: Who has the spare?
+      Reply: I do. It is safer with me.
+      Tone: 2
+      RaisesEvent:
+    - Text: Say nothing
+      Reply: "...I will show you where it is later."
+      Tone: 4
+      RaisesEvent:
+  - Line: Get settled. I will stay out of your way.
+    UsePhone: 0
+    Choices: []
+  choiceSeconds: 0
+  lineHold: 2.6

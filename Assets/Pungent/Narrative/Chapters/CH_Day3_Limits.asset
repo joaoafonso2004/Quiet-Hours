@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9359b6c3e69520948a22818c9a26ed87, type: 3}
+  m_Name: CH_Day3_Limits
+  m_EditorClassIdentifier: 
+  title: Day 3 - Limits
+  cardDate: WEDNESDAY
+  cardTime: 08:14
+  startsOnEvent: day_two
+  steps:
+  - Objective: 'OBJECTIVE: Check the apartment.'
+    SideObjective: 
+    Thought: Rui is never out this early. His bed has not been touched.
+    Ends: 2
+    Seconds: 5
+    Place: {x: -1.75, y: 0, z: -2.95}
+    Radius: 2.2
+    EventId: 
+    RaiseOnComplete:
+    - day3_searched
+  - Objective: 'OBJECTIVE: Do two things while the flat is empty.'
+    SideObjective: Choose from food, laundry, washing up, the table or the spilled wine
+    Thought: The flat is mine until one o'clock. That has not happened yet.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: day3_chores
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Finish the morning''s work.'
+    SideObjective: Use the laptop at your desk
+    Thought: One quiet hour. Use it while the flat is still empty.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: day3_ready
+    RaiseOnComplete:
+    - seller_confirms
+  - Objective: 'OBJECTIVE: Go to your room and lock the door.'
+    SideObjective: Rui has come back
+    Thought: He came in without calling out.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 5.93, y: 0, z: -1.45}
+    Radius: 1.8
+    EventId: day3_door_talk
+    RaiseOnComplete:
+    - day3_done
+    - day_four

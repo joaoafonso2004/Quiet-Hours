@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be533810d6d6e9241b91ae8c55f37417, type: 3}
+  m_Name: PHN_Dad
+  m_EditorClassIdentifier: 
+  contactName: Dad
+  unlockEvent: 
+  startsDelivered: 0
+  affectsRuiThreat: 0
+  steps:
+  - Line: Did you get there all right? Your mother wants to know if the room is damp.
+    DelaySeconds: 40
+    WaitForEvent: prologue_keys_taken
+    StaleAfterEvent: day_one_done
+    TypingSeconds: 3
+    Choices:
+    - Text: All fine. Bigger than the photos.
+      Reply: Good. Open a window anyway, first week is the worst.
+      Tone: 0
+      RaisesEvent:
+    - Text: It is a room, Dad.
+      Reply: It is a room you pay for. Open a window.
+      Tone: 1
+      RaisesEvent:
+    ReplyDelaySeconds: 55
+    EndsThread: 0
+  - Line: Your mother put soup in the KITCHEN box. Get it into the fridge before bed.
+    DelaySeconds: 20
+    WaitForEvent: boxes_carried
+    StaleAfterEvent: day_one_done
+    TypingSeconds: 2
+    Choices:
+    - Text: I found it.
+      Reply: Good. Eat some while you are at it.
+      Tone: 0
+      RaisesEvent:
+    - Text: I am still unpacking.
+      Reply: Then keep going. It will thaw.
+      Tone: 1
+      RaisesEvent:
+    ReplyDelaySeconds: 35
+    EndsThread: 0
+  - Line: Your mother wants a photo of the room. I told her you were still unpacking.
+    DelaySeconds: 15
+    WaitForEvent: kitchen_ready
+    StaleAfterEvent: day_one_done
+    TypingSeconds: 3
+    Choices:
+    - Text: Tell her tomorrow.
+      Reply: I did. She says before noon.
+      Tone: 0
+      RaisesEvent:
+    - Text: It is not ready.
+      Reply: That is why she wants the photo.
+      Tone: 1
+      RaisesEvent:
+    ReplyDelaySeconds: 35
+    EndsThread: 0
+  - Line: Lock the door. Then sleep. The boxes will still be there tomorrow.
+    DelaySeconds: 8
+    WaitForEvent: prologue_door_locked
+    StaleAfterEvent: day_one_done
+    TypingSeconds: 2
+    Choices:
+    - Text: Already locked.
+      Reply: Good. Habit worth keeping.
+      Tone: 0
+      RaisesEvent:
+    - Text: I know, Dad.
+      Reply: Then I have done my job.
+      Tone: 1
+      RaisesEvent:
+    ReplyDelaySeconds: 25
+    EndsThread: 0
+  - Line: Morning. Did you eat something that was not bread?
+    DelaySeconds: 120
+    WaitForEvent: day1_kitchen
+    StaleAfterEvent: day_one_done
+    TypingSeconds: 2
+    Choices:
+    - Text: I am eating. Stop.
+      Reply: That is not a yes.
+      Tone: 0
+      RaisesEvent: 
+    - Text: Not yet.
+      Reply: There it is. Eat.
+      Tone: 2
+      RaisesEvent: 
+    ReplyDelaySeconds: 60
+    EndsThread: 0
+  - Line: Did you ever sort out that noise in the car?
+    DelaySeconds: 100
+    WaitForEvent: day1_car_remarked
+    StaleAfterEvent: day_one_done
+    TypingSeconds: 3
+    Choices:
+    - Text: Not yet. Parts are expensive.
+      Reply: They are. Do not buy the cheap discs, you will pay twice.
+      Tone: 0
+      RaisesEvent: 
+    - Text: The bloke here knew what I drive. I never told him.
+      Reply: Small building. People look out of windows, Tomas.
+      Tone: 2
+      RaisesEvent: 
+    - Text: It is fine.
+      Reply: It is not fine, it has been six months.
+      Tone: 3
+      RaisesEvent: 
+    ReplyDelaySeconds: 75
+    EndsThread: 0
+  - Line: Sunday still on? She has already bought too much fish for three people.
+    DelaySeconds: 130
+    WaitForEvent: day1_deal
+    StaleAfterEvent: day_one_done
+    TypingSeconds: 2
+    Choices:
+    - Text: I will be there.
+      Reply: Good. Bring nothing, she has bought everything twice.
+      Tone: 0
+      RaisesEvent: 
+    - Text: I will try.
+      Reply: That means no. I will tell her you are working.
+      Tone: 3
+      RaisesEvent: 
+    ReplyDelaySeconds: 90
+    EndsThread: 0
+  - Line: Still awake? Saw you were online.
+    DelaySeconds: 18
+    WaitForEvent: day_one_done
+    StaleAfterEvent: 
+    TypingSeconds: 2
+    Choices:
+    - Text: Internet went down. Fixing it.
+      Reply: At three in the morning. Right.
+      Tone: 0
+      RaisesEvent: 
+    - Text: Cannot sleep.
+      Reply: New places do that. Give it a week.
+      Tone: 2
+      RaisesEvent: 
+    ReplyDelaySeconds: 50
+    EndsThread: 0
+  - Line: Your mother froze some soup for you. It has your name taped on it.
+    DelaySeconds: 55
+    WaitForEvent: router_restarted
+    StaleAfterEvent: 
+    TypingSeconds: 3
+    Choices: []
+    ReplyDelaySeconds: 0
+    EndsThread: 0
+  - Line: Go to bed. You have that early one on Tuesday and you paid for it yourself.
+    DelaySeconds: 70
+    WaitForEvent: talked_to_rui
+    StaleAfterEvent: 
+    TypingSeconds: 2
+    Choices: []
+    ReplyDelaySeconds: 0
+    EndsThread: 0
+  - Line: Morning. You were still up when I went to bed, were you not.
+    DelaySeconds: 90
+    WaitForEvent: day_two
+    StaleAfterEvent: 
+    TypingSeconds: 3
+    Choices:
+    - Text: I slept.
+      Reply: Hm.
+      Tone: 3
+      RaisesEvent: 
+    - Text: Not much. The flat makes noises.
+      Reply: All flats do. Ours creaks when the heating goes off.
+      Tone: 2
+      RaisesEvent: 
+    ReplyDelaySeconds: 80
+    EndsThread: 0
+  - Line: Is that flatmate of yours alright? You never say anything about him.
+    DelaySeconds: 260
+    WaitForEvent: day_two
+    StaleAfterEvent: 
+    TypingSeconds: 4
+    Choices:
+    - Text: He is fine. Keeps to himself.
+      Reply: That is the best kind. Ours downstairs plays music at two.
+      Tone: 3
+      RaisesEvent: 
+    - Text: He is always up when I am.
+      Reply: Students. He will burn out by December.
+      Tone: 2
+      RaisesEvent: 
+    - Text: I do not want to talk about him.
+      Reply: Alright. Sorry I asked.
+      Tone: 1
+      RaisesEvent: 
+    ReplyDelaySeconds: 110
+    EndsThread: 0
+  - Line: Are you eating? Properly, not that thing you call eating.
+    DelaySeconds: 120
+    WaitForEvent: day3_chores
+    StaleAfterEvent: 
+    TypingSeconds: 2
+    Choices:
+    - Text: I am eating.
+      Reply: Good.
+      Tone: 0
+      RaisesEvent: 
+    - Text: I am not really hungry lately.
+      Reply: That is your mother's side. Eat anyway.
+      Tone: 2
+      RaisesEvent: 
+    ReplyDelaySeconds: 70
+    EndsThread: 0
+  - Line: Did you get them in the end? Your mother is still asking about Sunday.
+    DelaySeconds: 75
+    WaitForEvent: evidence_found
+    StaleAfterEvent: 
+    TypingSeconds: 3
+    Choices: []
+    ReplyDelaySeconds: 0
+    EndsThread: 0

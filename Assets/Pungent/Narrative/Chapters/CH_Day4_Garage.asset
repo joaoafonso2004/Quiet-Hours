@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9359b6c3e69520948a22818c9a26ed87, type: 3}
+  m_Name: CH_Day4_Garage
+  m_EditorClassIdentifier: 
+  title: Day 4 - The box
+  cardDate: THURSDAY
+  cardTime: 22:41
+  startsOnEvent: day_four
+  steps:
+  - Objective: 'OBJECTIVE: Get the box inside.'
+    SideObjective: 
+    Thought: Ninety for both. Nobody sells a pair of these for ninety.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: parts_carried
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Unpack it. Kitchen counter.'
+    SideObjective: 
+    Thought: His door has been shut since I got back.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: evidence_found
+    RaiseOnComplete: []
+  - Objective: 
+    SideObjective: 
+    Thought: Someone is on the phone down in the street.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: heard_call
+    RaiseOnComplete:
+    - climax

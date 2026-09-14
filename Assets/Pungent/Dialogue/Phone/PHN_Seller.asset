@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be533810d6d6e9241b91ae8c55f37417, type: 3}
+  m_Name: PHN_Seller
+  m_EditorClassIdentifier: 
+  contactName: Vitor (parts)
+  unlockEvent: day1_deal
+  startsDelivered: 0
+  affectsRuiThreat: 0
+  steps:
+  - Line: Morning. Still want the alternator and the front discs?
+    DelaySeconds: 26
+    WaitForEvent: day_two
+    StaleAfterEvent: 
+    TypingSeconds: 4
+    Choices:
+    - Text: Yes. Today still works?
+      Reply: Today works. Cash, like we said.
+      Tone: 0
+      RaisesEvent: 
+    - Text: Remind me what you want for them.
+      Reply: Ninety for both. That is half what the shop wanted, so do not push it.
+      Tone: 2
+      RaisesEvent: 
+    ReplyDelaySeconds: 30
+    EndsThread: 0
+  - Line: I am up your way this evening. I will leave them inside the street door,
+      third floor landing.
+    DelaySeconds: 30
+    WaitForEvent: 
+    StaleAfterEvent: 
+    TypingSeconds: 4
+    Choices:
+    - Text: Fine. I will be in.
+      Reply: You do not need to be. Cash under the mat is fine by me.
+      Tone: 0
+      RaisesEvent: 
+    - Text: I never told you which floor.
+      Reply: Did you not? Someone did.
+      Tone: 1
+      RaisesEvent: 
+    ReplyDelaySeconds: 26
+    EndsThread: 0
+  - Line: Left it on your landing. Do not leave it out there all night, that building
+      is not as locked as you think.
+    DelaySeconds: 18
+    WaitForEvent: day3_ready
+    StaleAfterEvent: 
+    TypingSeconds: 4
+    Choices: []
+    ReplyDelaySeconds: 14
+    EndsThread: 1

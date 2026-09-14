@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9359b6c3e69520948a22818c9a26ed87, type: 3}
+  m_Name: CH_Prologue
+  m_EditorClassIdentifier: 
+  title: Prologue - The message
+  cardDate: 
+  cardTime: 
+  startsOnEvent: 
+  steps:
+  - Objective: 'OBJECTIVE: Talk to Rui.'
+    SideObjective: 
+    Thought: 
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: prologue_talked
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Take the keys by the entrance.'
+    SideObjective: 
+    Thought: 
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: prologue_keys_taken
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Find your room.'
+    SideObjective: 
+    Thought: Last door on the left, he said.
+    Ends: 2
+    Seconds: 5
+    Place: {x: -4.9, y: 0, z: -3.6}
+    Radius: 2
+    EventId: 
+    RaiseOnComplete:
+    - prologue_room_found
+  - Objective: 'OBJECTIVE: Carry all four boxes to your room.'
+    SideObjective: Drop each box anywhere inside the room
+    Thought: 
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: boxes_carried
+    RaiseOnComplete:
+    - prologue_unpacked
+  - Objective: 'OBJECTIVE: Put the laptop on the desk.'
+    SideObjective: It is in the box marked DESK
+    Thought: 
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: desk_ready
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Put the tools on the dresser in your room.'
+    SideObjective: The box marked TOOLS
+    Thought: 
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: tools_ready
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Put your clothes in the drawers.'
+    SideObjective: The box marked CLOTHES
+    Thought: 
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: clothes_ready
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Put the kitchen things on the worktop.'
+    SideObjective: The box marked KITCHEN
+    Thought: 
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: kitchen_ready
+    RaiseOnComplete:
+    - prologue_rui_arrives
+  - Objective: 'OBJECTIVE: Close your bedroom door.'
+    SideObjective: 
+    Thought: Rui is standing in my doorway.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: prologue_door_closed
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Lock your bedroom door.'
+    SideObjective: 
+    Thought: The lock sticks. Lift, then turn.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: prologue_door_locked
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Turn off the light and sleep.'
+    SideObjective: 
+    Thought: First night. I should get some sleep.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: prologue_slept
+    RaiseOnComplete:
+    - prologue_done

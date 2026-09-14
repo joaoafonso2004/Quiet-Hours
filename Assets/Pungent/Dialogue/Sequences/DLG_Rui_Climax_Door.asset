@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb96658ea9497e745bd8953c2f5e1176, type: 3}
+  m_Name: DLG_Rui_Climax_Door
+  m_EditorClassIdentifier: 
+  speaker: Rui
+  beats:
+  - Line: You are back. I heard the car.
+    UsePhone: 0
+    Choices:
+    - Text: I am tired. I am going to sleep.
+      Reply: You have not taken your shoes off. You always take them off at the door.
+      Tone: 0
+      RaisesEvent: 
+    - Text: Get away from my door.
+      Reply: I am not at your door. I am in the hall.
+      Tone: 1
+      RaisesEvent: 
+    - Text: Say nothing
+      Reply: "\u2026I can see the light under it, Tom\xE1s."
+      Tone: 4
+      RaisesEvent: 
+  - Line: That box was on the landing half the evening.
+    UsePhone: 0
+    Choices:
+    - Text: I did not take anything.
+      Reply: Nobody said you took anything.
+      Tone: 2
+      RaisesEvent: 
+    - Text: It is just car parts.
+      Reply: It is. I had a look at the label.
+      Tone: 3
+      RaisesEvent: 
+    - Text: Say nothing
+      Reply: "\u2026You did not seem surprised by what was in it."
+      Tone: 4
+      RaisesEvent: 
+  - Line: Open the door. We will sort it out and you can go to sleep.
+    UsePhone: 0
+    Choices: []
+  choiceSeconds: 0
+  lineHold: 3

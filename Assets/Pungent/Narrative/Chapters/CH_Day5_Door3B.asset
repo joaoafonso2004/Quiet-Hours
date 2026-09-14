@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9359b6c3e69520948a22818c9a26ed87, type: 3}
+  m_Name: CH_Day5_Door3B
+  m_EditorClassIdentifier: 
+  title: Day 5 - Door 3B
+  cardDate: FRIDAY
+  cardTime: 01:56
+  startsOnEvent: climax
+  steps:
+  - Objective: 'OBJECTIVE: Put your keys down. Get some sleep.'
+    SideObjective: 
+    Thought: The street door downstairs was open. This one was too.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: keys_down
+    RaiseOnComplete: []
+  - Objective: 
+    SideObjective: 
+    Thought: His door is shut. His door is never shut.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: climax_door_wrong
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Take your keys. You can sleep somewhere else.'
+    SideObjective: 
+    Thought: Somebody had a screwdriver in my room today.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: climax_keys_gone
+    RaiseOnComplete: []
+  - Objective: 'OBJECTIVE: Find your keys.'
+    SideObjective: 
+    Thought: There is one door in this flat I have never opened.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: keys_found
+    RaiseOnComplete:
+    - rui_awake
+  - Objective: 'OBJECTIVE: Get out. Front door.'
+    SideObjective: 
+    Thought: He is in the flat. He has been in the flat the whole time.
+    Ends: 3
+    Seconds: 5
+    Place: {x: 0, y: 0, z: 0}
+    Radius: 2
+    EventId: escaped
+    RaiseOnComplete:
+    - epilogue

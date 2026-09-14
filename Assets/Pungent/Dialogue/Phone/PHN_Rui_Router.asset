@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be533810d6d6e9241b91ae8c55f37417, type: 3}
+  m_Name: PHN_Rui_Router
+  m_EditorClassIdentifier: 
+  contactName: Rui
+  unlockEvent: prologue_talked
+  startsDelivered: 0
+  affectsRuiThreat: 1
+  steps:
+  - Line: Rui here. Now you have got it.
+    DelaySeconds: 22
+    WaitForEvent: prologue_talked
+    StaleAfterEvent: 
+    TypingSeconds: 2
+    Choices: []
+    ReplyDelaySeconds: 14
+    EndsThread: 0
+  - Line: Did your internet go down too? The router is at the end of the hall.
+    DelaySeconds: 6
+    WaitForEvent: day_one_done
+    StaleAfterEvent: 
+    TypingSeconds: 3
+    Choices:
+    - Text: I'll restart it.
+      Reply: I was working too. Don't take long.
+      Tone: 0
+      RaisesEvent: 
+    - Text: Why are you awake at this hour?
+      Reply: Does it matter? Just go and restart it.
+      Tone: 1
+      RaisesEvent: 
+    ReplyDelaySeconds: 6
+    EndsThread: 0
+  - Line: 
+    DelaySeconds: 0
+    WaitForEvent: day3_searched
+    StaleAfterEvent: 
+    TypingSeconds: 4
+    Choices:
+    - Text: where are you?
+      Reply: 
+      Tone: 0
+      RaisesEvent: 
+    - Text: are you working today?
+      Reply: 
+      Tone: 3
+      RaisesEvent: 
+    ReplyDelaySeconds: 0
+    EndsThread: 0
+  - Line: was out all morning. why
+    DelaySeconds: 45
+    WaitForEvent: day3_done
+    StaleAfterEvent: 
+    TypingSeconds: 5
+    Choices: []
+    ReplyDelaySeconds: 14
+    EndsThread: 0
+  - Line: you home?
+    DelaySeconds: 25
+    WaitForEvent: climax
+    StaleAfterEvent: 
+    TypingSeconds: 3
+    Choices: []
+    ReplyDelaySeconds: 14
+    EndsThread: 0
+  - Line: your light is on
+    DelaySeconds: 40
+    WaitForEvent: 
+    StaleAfterEvent: 
+    TypingSeconds: 4
+    Choices: []
+    ReplyDelaySeconds: 14
+    EndsThread: 0
+  - Line: vitor left something on the landing for you
+    DelaySeconds: 30
+    WaitForEvent: climax_door_wrong
+    StaleAfterEvent: 
+    TypingSeconds: 6
+    Choices: []
+    ReplyDelaySeconds: 14
+    EndsThread: 0
+  - Line: did you take it in or is it still out there
+    DelaySeconds: 35
+    WaitForEvent: 
+    StaleAfterEvent: 
+    TypingSeconds: 4
+    Choices: []
+    ReplyDelaySeconds: 14
+    EndsThread: 0
+  - Line: youre not in bed
+    DelaySeconds: 20
+    WaitForEvent: 
+    StaleAfterEvent: 
+    TypingSeconds: 2
+    Choices: []
+    ReplyDelaySeconds: 14
+    EndsThread: 1

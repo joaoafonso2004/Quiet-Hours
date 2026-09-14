@@ -1,0 +1,50 @@
+# Unity — pastas geradas pelo editor, reconstruídas em qualquer clone
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Unity regenera o lock a partir do manifest
+/Packages/packages-lock.json
+
+# Projectos e soluções gerados pelo Unity
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# IDEs
+.vs/
+.idea/
+.vscode/
+
+# Builds e pacotes
+sysinfo.txt
+*.apk
+*.aab
+*.app
+*.unitypackage
+crashlytics-build.properties
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
